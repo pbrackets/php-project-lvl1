@@ -1,2 +1,12 @@
 #!/usr/bin/env php
-Welcome to the Brain Games!
+<?php
+use function cli\line;
+use function cli\prompt;
+use function BrainGames\Cli\requestName;
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+
+line('Welcome to the Brain Game!');
+$name =requestName();
+line("Hello, %s!", $name);
