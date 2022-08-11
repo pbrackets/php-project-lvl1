@@ -1,7 +1,6 @@
 #!/usr/bin/env php
 <?php
 use function cli\line;
-use function cli\prompt;
 use function BrainGames\Cli\requestName;
 
 require_once __DIR__ . '/../vendor/autoload.php';
