@@ -4,6 +4,8 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 
+const ROUNDS_COUNT = 3;
+
 function runGame($generateRound)
 {
     line('Welcome to the Brain Game!');
@@ -11,7 +13,7 @@ function runGame($generateRound)
     line("Hello, %s!", $name);
     line("What is the result of the expression?");
 
-    for ($i = 1; $i <= 3 ; $i++) {
+    for ($i = 1; $i <= ROUNDS_COUNT ; $i++) {
         [$question, $solution] = $generateRound();
         line("Question: %s", $question);
         $answer = prompt('Your answer');
