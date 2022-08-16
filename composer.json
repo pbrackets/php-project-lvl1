@@ -4,7 +4,8 @@
     "license": "MIT",
     "bin": [
         "bin/brain-games", 
-        "bin/brain-even"
+        "bin/brain-even",
+        "bin/brain-calc"
     ],
     "type": "project",
     "autoload": {
@@ -12,7 +13,10 @@
             "BrainGames\\": "src/"
         },
         "files": [
-            "src/Even.php"
+          "src/Games/Cli.php",
+          "src/Games/Even.php",
+          "src/Games/Calc.php",
+          "src/Engine.php"
         ]    
     },
     "authors": [
