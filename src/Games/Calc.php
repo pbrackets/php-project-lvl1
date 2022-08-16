@@ -2,6 +2,8 @@
 namespace BrainGames\Games\Calc;
 use function BrainGames\Engine\runGame;
 
+const DESCRIPTION = 'What is the result of the expression?';
+
 function run()
 {
     $generateRound = function () {
@@ -28,6 +30,6 @@ function run()
         $question = $randNumber1 . $randSign . $randNumber2;
         return [$question, $solution];
     };
-    runGame($generateRound);
+    runGame(DESCRIPTION, $generateRound);
 }
 
