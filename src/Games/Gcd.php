@@ -22,7 +22,7 @@ function run()
         $randNumber2 = rand(1, 31);
 
         $solution = NOD($randNumber1, $randNumber2);
-        $question = $randNumber1 . '  ' . $randNumber2;
+        $question = $randNumber1 . ' ' . $randNumber2;
         return [$question, $solution];
     };
     runGame(DESCRIPTION, $generateRound);
