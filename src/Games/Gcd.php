@@ -1,5 +1,7 @@
 <?php
+
 namespace BrainGames\Games\Gcd;
+
 use function BrainGames\Engine\runGame;
 
 const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
@@ -8,8 +10,12 @@ function NOD($a, $b)
 {
     while ($a != $b)
     {
-        if ($a > $b) $a =  $a - $b;
-        else $b = $b - $a;
+        if ($a > $b)
+        {
+            $a =  $a - $b;
+        } else {
+            $b = $b - $a;
+        }
     }
     return $b;
 }

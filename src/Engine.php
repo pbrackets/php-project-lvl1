@@ -1,4 +1,5 @@
 <?php
+
 namespace BrainGames\Engine;
 
 use function cli\line;
@@ -13,12 +14,12 @@ function runGame($description, $generateRound)
     line("Hello, %s!", $name);
     line($description);
 
-    for ($i = 1; $i <= ROUNDS_COUNT ; $i++) {
+    for ($i = 1; $i <= ROUNDS_COUNT; $i++) {
         [$question, $solution] = $generateRound();
         line("Question: %s", $question);
         $answer = prompt('Your answer');
 
-        if ($answer == $solution)  {
+        if ($answer == $solution) {
             line('Correct!');
         } else {
             line("'$answer' is wrong answer ;(. Correct answer was '$solution'.");

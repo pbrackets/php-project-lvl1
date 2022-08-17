@@ -1,5 +1,7 @@
 <?php
+
 namespace BrainGames\Games\Progression;
+
 use function BrainGames\Engine\runGame;
 
 const DESCRIPTION = 'What number is missing in the progression?';
@@ -21,7 +23,6 @@ function run()
         $beginProgression = rand(1, 10);
         $stepProgression = rand(10, 10);
         $progression = getProgression(LENGTH_PROGRESSION, $beginProgression, $stepProgression);
-
         $missingElement = rand(0, count($progression)-1);
         $solution = $progression[$missingElement];
         $progression[$missingElement] = '..';

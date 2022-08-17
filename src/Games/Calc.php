@@ -1,5 +1,7 @@
 <?php
+
 namespace BrainGames\Games\Calc;
+
 use function BrainGames\Engine\runGame;
 
 const DESCRIPTION = 'What is the result of the expression?';
@@ -27,9 +29,10 @@ function run()
             default:
                 $solution = null;
         }
-        $question = $randNumber1 .' '. $randSign .' '. $randNumber2;
+        $question = $randNumber1 . ' ' . $randSign . ' ' . $randNumber2;
         return [$question, $solution];
     };
     runGame(DESCRIPTION, $generateRound);
 }
+
 

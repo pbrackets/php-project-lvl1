@@ -1,8 +1,8 @@
 <?php
 
 namespace BrainGames\Games\Even;
-use function BrainGames\Engine\runGame;
 
+use function BrainGames\Engine\runGame;
 
 const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 function run()
@@ -21,3 +21,4 @@ function run()
     };
     runGame(DESCRIPTION, $generateRound);
 }
+
