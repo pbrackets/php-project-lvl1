@@ -21,4 +21,3 @@ function run()
     };
     runGame(DESCRIPTION, $generateRound);
 }
-
