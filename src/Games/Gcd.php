@@ -6,7 +6,7 @@ use function BrainGames\Engine\runGame;
 
 const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
 
-function NOD($a, $b)
+function NOD(int $a, int $b)
 {
     while ($a != $b) {
         if ($a > $b) {
