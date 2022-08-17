@@ -1,34 +1,23 @@
 <?php
 
-namespace BrainGames\Even;
+namespace BrainGames\Games\Even;
+use function BrainGames\Engine\runGame;
 
-use function cli\line;
-use function cli\prompt;
 
-function playGame()
+const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
+function run()
 {
-    line('Welcome to the Brain Game!');
-    $name = prompt('May I have your name?');
-    line("Hello, %s!", $name);
-    line('Answer "yes" if the number is even, otherwise answer "no".');
+    $generateRound = function () {
+        $number = rand(1, 100);
+        $question = $number;
 
-    for ($i = 1; $i <= 3; $i++) {
-        $number = rand(1, 99);
-        line("Question: %s", $number);
-        $answer = prompt('Your answer');
-
-        if (($number % 2 == 0 && $answer == 'yes') || ($number % 2 != 0 && $answer == 'no')) {
-            line('Correct!');
+        if ($number % 2 == 0) {
+            $solution = 'yes';
         } else {
-            if ($number % 2 == 0) {
-                $correctAnswer = 'yes';
-            } else {
-                $correctAnswer = 'no';
-            }
-            line("'$answer' is wrong answer ;(. Correct answer was '$correctAnswer'.");
-            line("Let's try again, $name!");
-            return;
+            $solution = 'no';
         }
-    }
-    line("Congratulations, $name!");
+
+        return [$question, $solution];
+    };
+    runGame(DESCRIPTION, $generateRound);
 }
