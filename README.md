@@ -11,3 +11,12 @@ https://asciinema.org/a/rFrBLl04J3Gs2hydVyXCk9kIp
 ### brain-calc (asciinema.org)
 https://asciinema.org/a/d1PSczOG3F883pfuDnnJ9N2fI
 
+### brain-gcd (asciinema.org)
+https://asciinema.org/a/y8PiodhSX6EjD2Q9EDNiMJBH9
+
+### brain-progression (asciinema.org)
+https://asciinema.org/a/ZnYCnmN1RdV6ROExdxFJrY9TT
+
+
+
+
