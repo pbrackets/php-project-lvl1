@@ -27,7 +27,7 @@ function run()
             default:
                 $solution = null;
         }
-        $question = $randNumber1 . $randSign . $randNumber2;
+        $question = $randNumber1 .' '. $randSign .' '. $randNumber2;
         return [$question, $solution];
     };
     runGame(DESCRIPTION, $generateRound);
